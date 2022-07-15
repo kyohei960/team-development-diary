@@ -11,3 +11,15 @@
 3.列挙型をenumで管理する
 
 4.routes.rbで使われるresourceとresources。resourceはidが生成されず、resourcesはidが生成される。
+5.idは会員で例えると他人が第三者の情報などが見れるようにする場合はつける。
+6. .gitignoreは不要なファイルや管理の対象外にしたい場合に記述する所
+7. 質問したい場所
+ ターミナル
+【顧客用】
+$ rails g devise:views publics
+
+【管理者用】
+$ rails g devise:views admins
+上記のコマンドで生成された View ファイルは admins フォルダとして作成されるため、admin フォルダに改名を行いましょう。
+
+8.
