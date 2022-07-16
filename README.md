@@ -22,4 +22,43 @@ $ rails g devise:views publics
 $ rails g devise:views admins
 上記のコマンドで生成された View ファイルは admins フォルダとして作成されるため、admin フォルダに改名を行いましょう。
 
-8.
+8. scopeとnamespaceとscope module の違い
+scope
+いままで
+
+resources :books
+
+→/books books#index
+
+scope
+
+scope :admin do
+
+resources :books
+
+end
+
+→/admin/books books#index
+
+namespace
+namespace :admin do
+
+resources :books
+
+end
+
+→/admin/books
+
+admin/books#index
+
+module
+scope module: :admin do
+
+resorces :books
+
+end
+
+→/books
+
+admin/books#index
+
